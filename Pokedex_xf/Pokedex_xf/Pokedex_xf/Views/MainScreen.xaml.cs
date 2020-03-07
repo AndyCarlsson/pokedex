@@ -14,10 +14,11 @@ namespace Pokedex_xf.Views
             pokeCollectionBinding.ItemsSource = pokeCollection;
         }
 
-        ObservableCollection<Pokemon> pokeCollection = new ObservableCollection<Pokemon>() 
+        ObservableCollection<Pokemon> pokeCollection = new ObservableCollection<Pokemon>()
         {
             new Pokemon { Id = 1, Name = "Bulbasaur" },
-            new Pokemon { Id = 2, Name = "Pikachu" }
+            new Pokemon { Id = 2, Name = "Pikachu" },
+            new Pokemon { Id = 10, Name = "Kakuna" }
         };
 
     }
