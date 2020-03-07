@@ -9,12 +9,38 @@
         <CollectionView x:Name="pokeCollectionBinding">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame>
-                        <StackLayout BackgroundColor="LightCoral">
-                            <Label Text="{Binding Id}"/>
-                            <Label Text="{Binding Name}"/>
-                        </StackLayout>
-                    </Frame>
+                    <StackLayout BackgroundColor="LightCoral">
+                        <Frame CornerRadius="10"
+                           Padding="5"
+                           HasShadow="False"
+                           Margin="20">
+                            <StackLayout Orientation="Horizontal"
+                                         HeightRequest="75">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="10*"/>
+                                        <ColumnDefinition Width="20*"/>
+                                        <ColumnDefinition Width="30*"/>
+                                        <ColumnDefinition Width="20*"/>
+                                        <ColumnDefinition Width="20*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Id}"
+                                           FontSize="20"
+                                           HorizontalTextAlignment="End"
+                                           VerticalTextAlignment="Center"
+                                           Grid.Row="0" Grid.Column="0"/>
+                                    <Label Text="{Binding Name}"
+                                           FontSize="20"
+                                           HorizontalTextAlignment="End"
+                                           VerticalTextAlignment="Center"
+                                           Grid.Row="0" Grid.Column="2"/>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

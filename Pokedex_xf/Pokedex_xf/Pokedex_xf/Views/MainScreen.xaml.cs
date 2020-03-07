@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace Pokedex_xf.Views
 {
@@ -21,10 +16,9 @@ namespace Pokedex_xf.Views
 
         ObservableCollection<Pokemon> pokeCollection = new ObservableCollection<Pokemon>() 
         {
-            new Pokemon { Id = 1, Name = "Bulbasaur" }
+            new Pokemon { Id = 1, Name = "Bulbasaur" },
+            new Pokemon { Id = 2, Name = "Pikachu" }
         };
-
-
 
     }
 
@@ -33,4 +27,5 @@ namespace Pokedex_xf.Views
         public int Id { get; set; }
         public string Name { get; set; }
     }
+
 }
