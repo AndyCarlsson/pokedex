@@ -7,9 +7,13 @@
              x:Class="Pokedex_xf.Views.PokemonDetailPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="LightCoral">
-            <StackLayout BackgroundColor="White">
-                <Label Text="Hej"/>
-            </StackLayout>
+            <Frame BackgroundColor="White"
+                   Margin="30"
+                   CornerRadius="15">
+                <StackLayout HeightRequest="800">
+                    <Label Text="Hej"/>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
