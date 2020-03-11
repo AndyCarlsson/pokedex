@@ -8,10 +8,38 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="LightCoral">
             <Frame BackgroundColor="White"
+                   VerticalOptions="Center"
                    Margin="30"
+                   Padding="30"
                    CornerRadius="15">
-                <StackLayout HeightRequest="800">
-                    <Label Text="Hej"/>
+                <StackLayout HeightRequest="630"
+                             VerticalOptions="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="pikachu.webp" 
+                               Grid.Column="0"
+                               Grid.Row="0"/>
+                        <Label Text="Pikachu"
+                               Grid.Column="0"
+                               Grid.Row="1"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Utveckling"
+                               Grid.Column="0"
+                               Grid.Row="2"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                               Grid.Column="0"
+                               Grid.Row="3"/>
+                    </Grid>
                 </StackLayout>
             </Frame>
         </StackLayout>

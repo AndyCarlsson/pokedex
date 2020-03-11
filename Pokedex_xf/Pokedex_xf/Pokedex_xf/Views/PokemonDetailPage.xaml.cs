@@ -12,7 +12,7 @@ namespace Pokedex_xf.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PokemonDetailPage : ContentPage
     {
-        public PokemonDetailPage()
+        public PokemonDetailPage(Pokemon pokemon)
         {
             InitializeComponent();
         }

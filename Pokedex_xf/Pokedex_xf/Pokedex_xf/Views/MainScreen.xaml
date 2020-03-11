@@ -6,7 +6,9 @@
              mc:Ignorable="d"
              x:Class="Pokedex_xf.Views.MainScreen">
     <ContentPage.Content>
-        <CollectionView x:Name="pokeCollectionBinding">
+        <CollectionView x:Name="pokeCollectionBinding"
+                        SelectionMode="Single"
+                        SelectionChanged="pokeCollectionBinding_SelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout BackgroundColor="LightCoral">
@@ -43,9 +45,9 @@
                                            HorizontalTextAlignment="Start"
                                            VerticalTextAlignment="Center"
                                            Grid.Row="0" Grid.Column="2"/>
-                                    <Button Text="Press" Clicked="Button_Clicked"/>
+                                    
                                     <Frame CornerRadius="10" 
-                                           BackgroundColor="yellow"                                         
+                                           BackgroundColor="LightGray"                                         
                                            Padding="3"
                                            Grid.Row="0" Grid.Column="3">
                                         <Label Text="{Binding Type}"

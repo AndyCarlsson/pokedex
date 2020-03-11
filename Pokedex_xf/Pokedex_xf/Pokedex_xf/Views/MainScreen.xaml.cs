@@ -27,9 +27,10 @@ namespace Pokedex_xf.Views
             
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void pokeCollectionBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-          
+            var pokemonDetailPage = new PokemonDetailPage(e.CurrentSelection as Pokemon);
+            await Navigation.PushAsync(pokemonDetailPage);
         }
     }
 

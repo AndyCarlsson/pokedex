@@ -11,7 +11,7 @@ namespace Pokedex_xf
         {
             InitializeComponent();
 
-            MainPage = new MainScreen();
+            MainPage = new NavigationPage(new MainScreen());
         }
 
         protected override void OnStart()
