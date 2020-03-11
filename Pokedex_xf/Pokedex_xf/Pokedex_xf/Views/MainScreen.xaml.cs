@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -29,7 +30,7 @@ namespace Pokedex_xf.Views
 
         private async void pokeCollectionBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var pokemonDetailPage = new PokemonDetailPage(e.CurrentSelection as Pokemon);
+            var pokemonDetailPage = new PokemonDetailPage(e.CurrentSelection[0] as Pokemon);
             await Navigation.PushAsync(pokemonDetailPage);
         }
     }
