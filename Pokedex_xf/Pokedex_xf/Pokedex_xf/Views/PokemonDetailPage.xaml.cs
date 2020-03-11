@@ -17,6 +17,7 @@ namespace Pokedex_xf.Views
         {
             InitializeComponent();
             NameLabel.Text = pokemon.Name;
+            TypeLabel.Text = pokemon.Type;
         }
     }
 }

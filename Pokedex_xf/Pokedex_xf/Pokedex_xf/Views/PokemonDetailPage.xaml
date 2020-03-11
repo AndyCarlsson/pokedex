@@ -12,36 +12,49 @@
                    Margin="30"
                    Padding="30"
                    CornerRadius="15">
-                <StackLayout HeightRequest="630"
-                             VerticalOptions="Center">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="pikachu.webp" 
-                                Grid.Column="0"
-                                Grid.Row="0"/>
-                        <Label x:Name="NameLabel"
-                               Text=""
+                <Grid HeightRequest="600">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="pikachu.webp" 
+                               Grid.Column="0"
+                               Grid.Row="0"/>
+                    <Label x:Name="NameLabel"
+                               Text="Pikachu"
+                               FontSize="22"
                                Grid.Column="0"
                                Grid.Row="1"
-                               HorizontalOptions="Center"/>
-                        <Label Text="Utveckling"
+                               HorizontalOptions="Center"
+                               VerticalTextAlignment="Center"/>
+                    <Label x:Name="TypeLabel"
+                               Text="Electric"
+                               FontSize="16"
                                Grid.Column="0"
                                Grid.Row="2"
-                               HorizontalOptions="Center"/>
-                        <Label Text="{Binding Type}"
+                               HorizontalOptions="Center"
+                               VerticalTextAlignment="Center"/>
+                    <Label Text="Utveckling"
                                Grid.Column="0"
-                               Grid.Row="3"/>
-                    </Grid>
-                </StackLayout>
+                               Grid.Row="3"
+                               HorizontalOptions="Center"
+                               VerticalTextAlignment="Center"/>
+                    <Label Grid.Column="0"
+                               Grid.Row="4"
+                               FontSize="16"
+                               BackgroundColor="red"
+                               VerticalTextAlignment="Center"
+                               Text="Its nature is to store up electricity. Forests where nests of Pikachu live are dangerous,since the trees are so often struck by lightning."
+                            />
+
+                </Grid>
             </Frame>
         </StackLayout>
     </ContentPage.Content>
