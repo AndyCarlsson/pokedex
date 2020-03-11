@@ -45,17 +45,11 @@
                                            HorizontalTextAlignment="Start"
                                            VerticalTextAlignment="Center"
                                            Grid.Row="0" Grid.Column="2"/>
-                                    
-                                    <Frame CornerRadius="10" 
-                                           BackgroundColor="LightGray"                                         
-                                           Padding="3"
-                                           Grid.Row="0" Grid.Column="3">
-                                        <Label Text="{Binding Type}"
-                                               FontSize="18"
-                                               HorizontalOptions="Center"
-                                               HorizontalTextAlignment="Center"
-                                               VerticalTextAlignment="Center"/>
-                                    </Frame>
+                                    <Label Text="{Binding Type}"
+                                           Grid.Row="0" Grid.Column="3"
+                                           FontSize="16"
+                                           HorizontalTextAlignment="Start"
+                                           VerticalTextAlignment="Center"/>
                                 </Grid>
                             </StackLayout>
                         </Frame>
