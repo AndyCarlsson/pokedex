@@ -7,8 +7,7 @@
              x:Class="Pokedex_xf.Views.MainScreen">
     <ContentPage.Content>
         <CollectionView x:Name="pokeCollectionBinding"
-                        SelectionMode="Single"
-                        SelectionChanged="pokeCollectionBinding_SelectionChanged">
+                        SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout BackgroundColor="LightCoral">
@@ -35,8 +34,8 @@
                                            HorizontalTextAlignment="Center"
                                            VerticalTextAlignment="Center"
                                            Grid.Row="0" Grid.Column="0"/>
-                                    <Image Source="pikachu.webp"
-                                           Scale="0.7"
+                                    <Image Source="{Binding Sprites.FrontDefault}"
+                                           Scale="2"
                                            HorizontalOptions="Start"
                                            Grid.Row="0" Grid.Column="1"/>
                                     <Label Text="{Binding Name}"
@@ -45,8 +44,13 @@
                                            HorizontalTextAlignment="Start"
                                            VerticalTextAlignment="Center"
                                            Grid.Row="0" Grid.Column="2"/>
-                                    <Label Text="{Binding Type}"
+                                    <Label Text="{Binding Types[0].Type.Name}"
                                            Grid.Row="0" Grid.Column="3"
+                                           FontSize="16"
+                                           HorizontalTextAlignment="Start"
+                                           VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding Types[1].Type.Name}"
+                                           Grid.Row="0" Grid.Column="4"
                                            FontSize="16"
                                            HorizontalTextAlignment="Start"
                                            VerticalTextAlignment="Center"/>

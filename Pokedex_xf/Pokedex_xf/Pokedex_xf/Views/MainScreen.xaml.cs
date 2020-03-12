@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using PokeApiNet;
 
 
 namespace Pokedex_xf.Views
@@ -13,34 +14,41 @@ namespace Pokedex_xf.Views
         public MainScreen()
         {
             InitializeComponent();
+            GetPokemonData();
             pokeCollectionBinding.ItemsSource = pokeCollection;           
         }
 
-        ObservableCollection<Pokemon> pokeCollection = new ObservableCollection<Pokemon>()
-        {
-            new Pokemon { Id = 1, Name = "Bulbasaur", Type= "Grass" },
-            new Pokemon { Id = 2, Name = "Pikachu", Type = "Electric"},
-            new Pokemon { Id = 10, Name = "Kakuna", Type = "Bug"}
-        };
+        ObservableCollection<Pokemon> pokeCollection = new ObservableCollection<Pokemon>();
+        //{
+        //    new Pokemon { Id = 1, Name = "Bulbasaur", Type= "Grass" },
+        //    new Pokemon { Id = 2, Name = "Pikachu", Type = "Electric"},
+        //    new Pokemon { Id = 10, Name = "Kakuna", Type = "Bug"}
+        //};
 
-        public void changeBgColor()
-        {
-            
-        }
 
-        private async void pokeCollectionBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void GetPokemonData()
         {
-            var pokemonDetailPage = new PokemonDetailPage(e.CurrentSelection[0] as Pokemon);
-            await Navigation.PushAsync(pokemonDetailPage);
+            PokeApiClient pokeClient = new PokeApiClient();
+
+            Pokemon pokemon = await pokeClient.GetResourceAsync<Pokemon>(1);
+            pokeCollection.Add(pokemon);
         }
+        
+
+
+        //private async void pokeCollectionBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    var pokemonDetailPage = new PokemonDetailPage(e.CurrentSelection[0] as Pokemon);
+        //    await Navigation.PushAsync(pokemonDetailPage);
+        //}
     }
 
 
 
-    public class Pokemon
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Type { get; set; }
-    }
+    //public class Pokemon
+    //{
+    //    public int Id { get; set; }
+    //    public string Name { get; set; }
+    //    public string Type { get; set; }
+    //}
 }
