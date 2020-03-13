@@ -19,28 +19,26 @@ namespace Pokedex_xf.Views
         }
 
         ObservableCollection<Pokemon> pokeCollection = new ObservableCollection<Pokemon>();
-        //{
-        //    new Pokemon { Id = 1, Name = "Bulbasaur", Type= "Grass" },
-        //    new Pokemon { Id = 2, Name = "Pikachu", Type = "Electric"},
-        //    new Pokemon { Id = 10, Name = "Kakuna", Type = "Bug"}
-        //};
 
-
+        private int index = 1;
         private async void GetPokemonData()
         {
             PokeApiClient pokeClient = new PokeApiClient();
-
-            Pokemon pokemon = await pokeClient.GetResourceAsync<Pokemon>(1);
-            pokeCollection.Add(pokemon);
-        }
         
+            for (int i = 0; i < 10; i++)
+            {
+                Pokemon pokemon = await pokeClient.GetResourceAsync<Pokemon>(index);
+                pokeCollection.Add(pokemon);
+                index++;
+            }           
+        }
 
 
-        //private async void pokeCollectionBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    var pokemonDetailPage = new PokemonDetailPage(e.CurrentSelection[0] as Pokemon);
-        //    await Navigation.PushAsync(pokemonDetailPage);
-        //}
+        private async void pokeCollectionBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var pokemonDetailPage = new PokemonDetailPage(e.CurrentSelection[0] as Pokemon);
+            await Navigation.PushAsync(pokemonDetailPage);
+        }
     }
 
 
