@@ -23,32 +23,48 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Image Source="pikachu.webp" 
+                    <Image x:Name="SpriteImage"
+                        Source="pikachu.webp"
+                           Scale="3"
                                Grid.Column="0"
-                               Grid.Row="0"/>
+                           Grid.ColumnSpan="2"
+                               Grid.Row="0"
+                           HorizontalOptions="Center"/>
+                    
                     <Label x:Name="NameLabel"
                                Text="Pikachu"
                                FontSize="22"
                                Grid.Column="0"
+                           Grid.ColumnSpan="2"
                                Grid.Row="1"
                                HorizontalOptions="Center"
                                VerticalTextAlignment="Center"/>
-                    <Label x:Name="TypeLabel"
+                    <Label x:Name="TypeOneLabel"
                                Text="Electric"
                                FontSize="16"
                                Grid.Column="0"
                                Grid.Row="2"
-                               HorizontalOptions="Center"
+                               HorizontalOptions="End"
+                               VerticalTextAlignment="Center"/>
+                    <Label x:Name="TypeTwoLabel"
+                               Text=""
+                               FontSize="16"
+                               Grid.Column="1"
+                               Grid.Row="2"
+                               HorizontalOptions="Start"
                                VerticalTextAlignment="Center"/>
                     <Label Text="Utveckling"
                                Grid.Column="0"
                                Grid.Row="3"
                                HorizontalOptions="Center"
                                VerticalTextAlignment="Center"/>
-                    <Label Grid.Column="0"
+                    <Label x:Name="DescLabel"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="2"
                                Grid.Row="4"
-                               FontSize="16"
+                               FontSize="14"
                                VerticalTextAlignment="Center"
                                Text='"Its nature is to store up electricity. Forests where nests of Pikachu live are dangerous,since the trees are so often struck by lightning."'
                             />
