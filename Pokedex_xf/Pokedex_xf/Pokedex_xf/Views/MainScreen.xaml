@@ -46,13 +46,15 @@
                                            HorizontalTextAlignment="Start"
                                            VerticalTextAlignment="Center"
                                            Grid.Row="0" Grid.Column="2"/>
-                                    <Label Text="{Binding Types[0].Type.Name}"
+                                    <Label x:Name="TypeLabelOne"
+                                           Text="{Binding Types[0].Type.Name}"
                                            Grid.Row="0" Grid.Column="3"
                                            FontSize="16"
                                            Margin="5,0,0,0"
                                            HorizontalTextAlignment="Start"
                                            VerticalTextAlignment="Center"/>
-                                    <Label Text="{Binding Types[1].Type.Name}"
+                                    <Label x:Name="TypeLabelTwo"
+                                           Text="{Binding Types[1].Type.Name}"
                                            Grid.Row="0" Grid.Column="4"
                                            FontSize="16"
                                            HorizontalTextAlignment="Start"

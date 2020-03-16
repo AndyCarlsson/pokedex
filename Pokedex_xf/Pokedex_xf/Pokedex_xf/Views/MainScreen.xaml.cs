@@ -13,7 +13,7 @@ namespace Pokedex_xf.Views
         {
             InitializeComponent();
             GetPokemonData();
-            pokeCollectionBinding.ItemsSource = pokeCollection;           
+            pokeCollectionBinding.ItemsSource = pokeCollection;
         }
 
         ObservableCollection<Pokemon> pokeCollection = new ObservableCollection<Pokemon>();
@@ -26,11 +26,18 @@ namespace Pokedex_xf.Views
             for (int i = 0; i < 10; i++)
             {
                 Pokemon pokemon = await pokeApiClient.GetResourceAsync<Pokemon>(index);
-                pokeCollection.Add(pokemon);
+                pokeCollection.Add(pokemon);             
                 index++;
-
             }           
         }
+
+        //public void SetTypeColor(Pokemon pokemon)
+        //{
+        //    if (pokemon.Types[0].Type.Name == "fire")
+        //    {
+                
+        //    }
+        //}
 
         private async void pokeCollectionBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
