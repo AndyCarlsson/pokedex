@@ -6,10 +6,10 @@
              mc:Ignorable="d"
              x:Class="Pokedex_xf.Views.PokemonDetailPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#FF0000">
+        <StackLayout BackgroundColor="#FA8072">
             <Frame BackgroundColor="White"
                    VerticalOptions="Center"
-                   Margin="30"
+                   Margin= "30"
                    Padding="30"
                    CornerRadius="15">
                 <Grid HeightRequest="600">
@@ -18,7 +18,7 @@
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="70"/>
-                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="180"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -42,14 +42,14 @@
                                VerticalTextAlignment="Center"/>
                     <Label x:Name="TypeOneLabel"
                                Text=""
-                               FontSize="17"
+                               FontSize="16"
                                Grid.Column="0"
                                Grid.Row="2"
                                HorizontalOptions="Center"
                                VerticalTextAlignment="Center"/>
                     <Label x:Name="TypeTwoLabel"
                                Text=""
-                               FontSize="17"
+                               FontSize="16"
                                Grid.Column="1"
                                Grid.Row="2"
                                HorizontalOptions="Center"

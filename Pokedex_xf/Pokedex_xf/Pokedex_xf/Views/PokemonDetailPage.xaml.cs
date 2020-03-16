@@ -32,7 +32,19 @@ namespace Pokedex_xf.Views
             
             var detail = await pokeApiClient.GetResourceAsync<PokemonSpecies>(id);
 
-            DescLabel.Text = detail.FlavorTextEntries[1].FlavorText;
+            foreach (var entry in detail.FlavorTextEntries)
+            {
+                if (detail.FlavorTextEntries[1].Language.Name == "en")
+                {
+                    DescLabel.Text = "\u0022" + $"{ detail.FlavorTextEntries[1].FlavorText}" + "\u0022";
+                }
+                else
+                {
+                    DescLabel.Text = "\u0022" + $"{ detail.FlavorTextEntries[2].FlavorText}" + "\u0022";
+                }
+            }
+
+           
         }
     }
 }

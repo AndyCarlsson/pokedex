@@ -11,7 +11,7 @@
                         SelectionChanged="pokeCollectionBinding_SelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout BackgroundColor="#FF0000">
+                    <StackLayout BackgroundColor="#FA8072">
                         <Frame CornerRadius="10"
                                Padding="5"
                                HasShadow="False"
@@ -26,8 +26,8 @@
                                         <ColumnDefinition Width="30"/>
                                         <ColumnDefinition Width="70"/>
                                         <ColumnDefinition Width="110"/>
-                                        <ColumnDefinition Width="55"/>
-                                        <ColumnDefinition Width="55"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Id}"
                                            FontSize="12"
