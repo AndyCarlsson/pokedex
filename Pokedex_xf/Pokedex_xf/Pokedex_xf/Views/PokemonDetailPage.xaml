@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="Pokedex_xf.Views.PokemonDetailPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="LightCoral">
+        <StackLayout BackgroundColor="#FF0000">
             <Frame BackgroundColor="White"
                    VerticalOptions="Center"
                    Margin="30"
@@ -24,32 +24,32 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Image x:Name="SpriteImage"
-                        Source="pikachu.webp"
-                           Scale="3"
-                               Grid.Column="0"
-                           Grid.ColumnSpan="2"
-                               Grid.Row="0"
-                           HorizontalOptions="Center"/>
                     
+                    <Image x:Name="SpriteImage"
+                           Source=""
+                           Scale="3"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Grid.Row="0"
+                           HorizontalOptions="Center"/>
                     <Label x:Name="NameLabel"
-                               Text="Pikachu"
+                               Text=""
                                FontSize="22"
                                Grid.Column="0"
-                           Grid.ColumnSpan="2"
+                               Grid.ColumnSpan="2"
                                Grid.Row="1"
                                HorizontalOptions="Center"
                                VerticalTextAlignment="Center"/>
                     <Label x:Name="TypeOneLabel"
-                               Text="Electric"
-                               FontSize="16"
+                               Text=""
+                               FontSize="17"
                                Grid.Column="0"
                                Grid.Row="2"
                                HorizontalOptions="Center"
                                VerticalTextAlignment="Center"/>
                     <Label x:Name="TypeTwoLabel"
                                Text=""
-                               FontSize="16"
+                               FontSize="17"
                                Grid.Column="1"
                                Grid.Row="2"
                                HorizontalOptions="Center"

@@ -6,6 +6,10 @@
              mc:Ignorable="d"
              x:Class="Pokedex_xf.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="8bitOperatorPlus-Regular.ttf#8bitOperatorPlus-regular" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

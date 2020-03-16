@@ -23,8 +23,7 @@ namespace Pokedex_xf.Views
             {
                 Grid.SetColumnSpan(TypeOneLabel, 2);
                 TypeOneLabel.HorizontalOptions = LayoutOptions.Center;
-            }
-            
+            }         
         }
 
         public async void GetDetailInfo(int id)

@@ -65,6 +65,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\8bitOperatorPlus8-Bold.ttf" />
+    <AndroidAsset Include="Assets\8bitOperatorPlus8-Regular.ttf" />
+    <AndroidAsset Include="Assets\8bitOperatorPlus-Bold.ttf" />
+    <AndroidAsset Include="Assets\8bitOperatorPlus-Regular.ttf" />
+    <AndroidAsset Include="Assets\8bitOperatorPlusSC-Bold.ttf" />
+    <AndroidAsset Include="Assets\8bitOperatorPlusSC-Regular.ttf" />
+    <AndroidAsset Include="Assets\PressStart2P-vaV7.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
