@@ -41,31 +41,61 @@
                                HorizontalOptions="Center"
                                VerticalTextAlignment="Center"/>
                     <Label x:Name="TypeOneLabel"
+                           Margin="0,0,5,0"
                                Text=""
                                FontSize="16"
                                Grid.Column="0"
                                Grid.Row="2"
-                               HorizontalOptions="Center"
+                               HorizontalOptions="End"
                                VerticalTextAlignment="Center"/>
                     <Label x:Name="TypeTwoLabel"
+                           Margin="5,0,0,0"
                                Text=""
                                FontSize="16"
                                Grid.Column="1"
                                Grid.Row="2"
-                               HorizontalOptions="Center"
+                               HorizontalOptions="Start"
                                VerticalTextAlignment="Center"/>
-                    <!--<Label x:Name="EvoChain"
-                        Text="Utveckling"
-                               Grid.Column="0"
-                               Grid.Row="3"
-                               HorizontalOptions="Center"
-                               VerticalTextAlignment="Center"/>-->
+                    <StackLayout Grid.Column="0"
+                                 Grid.Row="3"
+                                 Grid.ColumnSpan="2"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="End">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="85"/>
+                                <ColumnDefinition Width="85"/>
+                                <ColumnDefinition Width="85"/>
+                            </Grid.ColumnDefinitions>
+                            <Label x:Name="EvoChainOne"
+                                   Text=""
+                                   FontSize="13"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   HorizontalOptions="Start"
+                                   VerticalTextAlignment="End"/>
+                            <Label x:Name="EvoChainTwo"
+                                   Text=""
+                                   FontSize="13"
+                                   Grid.Row="0"
+                                   Grid.Column="1"
+                                   HorizontalOptions="Center"
+                                   VerticalTextAlignment="End"/>
+                            <Label x:Name="EvoChainThree"
+                                   Text=""
+                                   FontSize="13"
+                                   Grid.Row="0"
+                                   Grid.Column="2"
+                                   HorizontalOptions="End"
+                                   VerticalTextAlignment="End"/>
+                        </Grid>
+                    </StackLayout>
                     <Label x:Name="DescLabel"
                                Grid.Column="0"
                                Grid.ColumnSpan="2"
                                Grid.Row="4"
                                FontSize="15"
-                           VerticalOptions="Start"
+                               VerticalOptions="End"
                                Text=""/>
                 </Grid>
             </Frame>
