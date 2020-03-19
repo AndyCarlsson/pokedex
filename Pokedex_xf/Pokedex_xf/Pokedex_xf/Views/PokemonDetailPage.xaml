@@ -9,7 +9,7 @@
         <StackLayout BackgroundColor="#FA8072">
             <Frame BackgroundColor="White"
                    VerticalOptions="Center"
-                   Margin= "30"
+                   Margin= "15,0,15,30"
                    Padding="30"
                    CornerRadius="15">
                 <Grid HeightRequest="600">
@@ -94,12 +94,11 @@
                         </Grid>
                     </StackLayout>-->
                     <Label x:Name="DescLabel"
-                               Grid.Column="0"
-                               Grid.ColumnSpan="2"
-                               Grid.Row="4"
-                               FontSize="15"
-                               VerticalOptions="Start"
-                               Text=""/>
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Grid.Row="4"
+                            FontSize="15"
+                            VerticalOptions="Start"/>
                 </Grid>
             </Frame>
         </StackLayout>
