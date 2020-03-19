@@ -1,4 +1,4 @@
-# pokdex
+# pokedex
 
 This is a xamarin forms app written in C#/.Net inspired by the classic pokemon game. My main goal was to practice building a mobile application with xamarin forms with focus on the xaml markup language.
 
