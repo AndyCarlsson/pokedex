@@ -31,12 +31,7 @@ namespace Pokedex_xf.Views
             PokeApiClient pokeApiClient = new PokeApiClient();
 
             var detail = await pokeApiClient.GetResourceAsync<PokemonSpecies>(id);
-
-            var evolutions = await pokeApiClient.GetResourceAsync(detail.EvolutionChain);
-
-            EvoChainOne.Text = evolutions.Chain.Species.Name;
-            EvoChainTwo.Text = evolutions.Chain.EvolvesTo[0].Species.Name;
-            EvoChainThree.Text = evolutions.Chain.EvolvesTo[0].EvolvesTo[0].Species.Name;
+            //var evolutions = await pokeApiClient.GetResourceAsync(detail.EvolutionChain);
 
             foreach (var entry in detail.FlavorTextEntries)
             {
@@ -49,8 +44,6 @@ namespace Pokedex_xf.Views
                     DescLabel.Text = "\u0022" + $"{ detail.FlavorTextEntries[2].FlavorText}" + "\u0022";
                 }
             }
-
-           
         }
     }
 }

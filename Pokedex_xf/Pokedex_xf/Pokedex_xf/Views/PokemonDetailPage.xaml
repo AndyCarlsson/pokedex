@@ -14,10 +14,10 @@
                    CornerRadius="15">
                 <Grid HeightRequest="600">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="130"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
-                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="30"/>
                         <RowDefinition Height="180"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
@@ -27,7 +27,7 @@
                     
                     <Image x:Name="SpriteImage"
                            Source=""
-                           Scale="3"
+                           Scale="3.6"
                            Grid.Column="0"
                            Grid.ColumnSpan="2"
                            Grid.Row="0"
@@ -56,7 +56,7 @@
                                Grid.Row="2"
                                HorizontalOptions="Start"
                                VerticalTextAlignment="Center"/>
-                    <StackLayout Grid.Column="0"
+                    <!--<StackLayout Grid.Column="0"
                                  Grid.Row="3"
                                  Grid.ColumnSpan="2"
                                  HorizontalOptions="Center"
@@ -67,6 +67,9 @@
                                 <ColumnDefinition Width="85"/>
                                 <ColumnDefinition Width="85"/>
                             </Grid.ColumnDefinitions>
+                            <Label x:Name="EvoChainOneImage"
+                                   Grid.Row="1"
+                                   Grid.Column="0"/>
                             <Label x:Name="EvoChainOne"
                                    Text=""
                                    FontSize="13"
@@ -89,13 +92,13 @@
                                    HorizontalOptions="End"
                                    VerticalTextAlignment="End"/>
                         </Grid>
-                    </StackLayout>
+                    </StackLayout>-->
                     <Label x:Name="DescLabel"
                                Grid.Column="0"
                                Grid.ColumnSpan="2"
                                Grid.Row="4"
                                FontSize="15"
-                               VerticalOptions="End"
+                               VerticalOptions="Start"
                                Text=""/>
                 </Grid>
             </Frame>

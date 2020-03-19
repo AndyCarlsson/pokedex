@@ -31,13 +31,13 @@ namespace Pokedex_xf.Views
             }           
         }
 
-        public void SetTypeColor(Pokemon pokemon)
-        {
-            if (pokemon.Types[0].Type.Name == "fire")
-            {
+        //public void SetTypeColor(Pokemon pokemon)
+        //{
+        //    if (pokemon.Types[0].Type.Name == "fire")
+        //    {
                
-            }
-        }
+        //    }
+        //}
 
         private async void pokeCollectionBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
