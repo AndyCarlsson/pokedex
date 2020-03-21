@@ -23,21 +23,13 @@ namespace Pokedex_xf.Views
         {
             PokeApiClient pokeApiClient = new PokeApiClient();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 151; i++)
             {
                 Pokemon pokemon = await pokeApiClient.GetResourceAsync<Pokemon>(index);
                 pokeCollection.Add(pokemon);             
                 index++;
             }           
         }
-
-        //public void SetTypeColor(Pokemon pokemon)
-        //{
-        //    if (pokemon.Types[0].Type.Name == "fire")
-        //    {
-               
-        //    }
-        //}
 
         private async void pokeCollectionBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

@@ -25,7 +25,7 @@
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="auto"/>
-                                        <ColumnDefinition Width="15"/>
+                                        <ColumnDefinition Width="25"/>
                                         <ColumnDefinition Width="70"/>
                                         <ColumnDefinition Width="115"/>
                                         <ColumnDefinition Width="auto"/>
