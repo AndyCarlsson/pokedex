@@ -5,9 +5,19 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Pokedex_xf.Views.MainScreen">
+             x:Class="Pokedex_xf.Views.MainScreen"
+             BackgroundColor="#FA8072">
     <ContentPage.Content>
-        <CollectionView x:Name="pokeCollectionBinding"
+        <StackLayout>
+            <SearchBar x:Name="pokeSearch"
+                       SearchButtonPressed="pokeSearch_SearchButtonPressed"
+                       Placeholder="Search: Id / Name / 'all' to return )"
+                       PlaceholderColor="Gray"
+                       CancelButtonColor="Gray"
+                       FontSize="14"
+                       TextColor="Black"
+                       BackgroundColor="#fff"/>
+            <CollectionView x:Name="pokeCollectionBinding"
                         SelectionMode="Single"
                         SelectionChanged="pokeCollectionBinding_SelectionChanged">
             <CollectionView.ItemTemplate>
@@ -74,5 +84,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

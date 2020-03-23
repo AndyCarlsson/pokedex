@@ -31,7 +31,6 @@ namespace Pokedex_xf.Views
             PokeApiClient pokeApiClient = new PokeApiClient();
 
             var detail = await pokeApiClient.GetResourceAsync<PokemonSpecies>(id);
-            //var evolutions = await pokeApiClient.GetResourceAsync(detail.EvolutionChain);
 
             foreach (var entry in detail.FlavorTextEntries)
             {
